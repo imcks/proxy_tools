@@ -5,6 +5,9 @@
 #!homepage = https://github.com/imcks/proxy_tools/tree/main/Loon
 #!icon = https://raw.githubusercontent.com/imcks/proxy_tools/main/Loon/TestFlight/TestFlight.png
 
+[URL Rewrite]
+^http:\/\/115\.com\/\?ct=sign$ http://115.com/lx?taskdg=1 header
+
 [Script]
 http-response ^http:\/\/115\.com\/lx.*$ script-path=https://raw.githubusercontent.com/ikanam/Surge-Scripts/master/115lx.js, requires-body=true
 http-response ^https?:\/\/webapi\.115\.com\/user\/check_sign.*$ script-path=https://raw.githubusercontent.com/ikanam/Surge-Scripts/master/115lx.js, requires-body=true
